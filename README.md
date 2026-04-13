@@ -1,8 +1,9 @@
 # 📘 Big Data Project – Amazon Kindle Reviews Analysis
 
 ## 👤 Author
+
 Gerardo Macías Romo  
-Big Data – Intermediate Project  
+Big Data – Intermediate Project
 
 ---
 
@@ -81,19 +82,20 @@ project/
 The dataset is NOT included due to its large size (>2 million records).
 
 ## 🔗 Source:
+
 Amazon Review Dataset  
-https://nijianmo.github.io/amazon/index.html  
+https://nijianmo.github.io/amazon/index.html
 
 ## 📦 Dataset Used:
+
 Kindle Store 5-core dataset
 
 ## 📁 Installation Steps:
 
-1. Download the dataset from the link above  
+1. Download the dataset from the link above
 2. Extract it into the following folder:
 
 data/raw/Kindle_Store_5/
-
 
 3. Ensure JSON files are inside this directory
 
@@ -105,8 +107,10 @@ Install dependencies:
 
 ```bash
 pip install pyspark pandas matplotlib seaborn scikit-learn
+```
 
 # ▶️ Execution Order (IMPORTANT)
+
 Run scripts in the following order:
 
 1.-spark_config.py
@@ -122,16 +126,19 @@ Run scripts in the following order:
 # 🧹 Data Processing Pipeline
 
 ## ✔ Data Cleaning
+
 - Removed null values
 - Filtered invalid ratings (1–5 range)
 - Ensured schema consistency across all records
 
 ## ✔ Transformations
+
 - Text normalization (lowercasing and punctuation removal)
 - Date conversion from Unix timestamp
 - Feature extraction (review length, review date)
 
 ## ✔ Feature Engineering
+
 - Sentiment classification based on rating:
   - Positive → 4–5 stars
   - Neutral → 3 stars
@@ -145,16 +152,19 @@ Run scripts in the following order:
 # 📊 Analytics & Insights
 
 ## 📌 Key Insights
+
 - Ratings distribution is highly skewed toward 5 stars
 - Most users provide positive feedback
 - Longer reviews are more common in neutral or negative ratings
 
 ## 📌 Explanation
+
 - Amazon review bias: satisfied users are more likely to leave reviews
 - Popular books dominate the dataset, increasing positive ratings
 - Users with stronger opinions tend to write longer reviews
 
 ## 📌 Recommendations
+
 - Improve recommendation systems using sentiment-aware filtering
 - Identify low-rated books for quality improvement analysis
 - Segment users based on behavior for targeted marketing strategies
@@ -170,12 +180,15 @@ A K-Means clustering model was applied to segment books/users into behavioral gr
 - Number of reviews
 
 ## Insight:
+
 The data naturally separates into 3 clusters:
+
 - High satisfaction group
 - Neutral engagement group
 - Low satisfaction / critical group
 
 ## Business Use:
+
 - Personalized recommendations
 - Customer segmentation
 - Review quality analysis
@@ -187,6 +200,7 @@ The data naturally separates into 3 clusters:
 A structured analytical model was created to support querying and reporting.
 
 ## Design:
+
 - Fact table: reviews
 - Dimensions:
   - books (asin)
@@ -194,6 +208,7 @@ A structured analytical model was created to support querying and reporting.
   - sentiment classification
 
 ## Stored Outputs:
+
 - Aggregated book statistics
 - Rating distributions
 - Sentiment summaries
@@ -215,8 +230,8 @@ All charts are saved in:
 
 outputs/charts/
 
-
 ## Insights from Visuals:
+
 - Strong bias toward 5-star ratings
 - Clear separation in sentiment groups
 - Most books have small variance in ratings
@@ -228,11 +243,13 @@ outputs/charts/
 A simulated streaming pipeline was implemented using micro-batches.
 
 ## Process:
+
 - Data processed in small batches
 - Incremental aggregation of ratings
 - Real-time update of book statistics
 
 ## Output:
+
 - Batch-level averages
 - Incremental updates of book metrics
 - Final aggregated view of dataset
@@ -259,7 +276,7 @@ This project demonstrates a complete Big Data pipeline with:
 ✔ Analytical data modeling  
 ✔ Machine learning clustering  
 ✔ Data visualization and insights generation  
-✔ End-to-end reproducible architecture  
+✔ End-to-end reproducible architecture
 
 ---
 
