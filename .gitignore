@@ -1,0 +1,61 @@
+# =========================
+# PYTHON
+# =========================
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+env/
+venv/
+.venv/
+
+# =========================
+# SPARK / BIG DATA OUTPUTS
+# =========================
+data/raw/
+data/processed/
+data/curated/
+data/logs/
+data/ai
+
+# Parquet files (generated outputs)
+*.parquet
+
+# =========================
+# DATABASE FILES
+# =========================
+*.db
+*.sqlite
+*.sqlite3
+
+# =========================
+# JUPYTER NOTEBOOKS (if used)
+# =========================
+.ipynb_checkpoints/
+
+# =========================
+# SYSTEM FILES
+# =========================
+.DS_Store
+Thumbs.db
+
+# =========================
+# OUTPUT FILES (charts, exports)
+# =========================
+outputs/
+*.png
+*.csv
+
+# =========================
+# SPARK TEMP FILES
+# =========================
+spark-warehouse/
+.metastore_db/
+derby.log
+
+# =========================
+# IDE
+# =========================
+.vscode/
+.idea/
